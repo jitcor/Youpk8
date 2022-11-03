@@ -20,9 +20,6 @@
 
 
   
-更多详情：星球《[逆向涉猎](https://t.zsxq.com/071NJKjZb)》  
-  
-planet 《[Reverse Dabbling](https://t.zsxq.com/071NJKjZb)》  
 
 ---  
 ---  
