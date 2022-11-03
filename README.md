@@ -3,7 +3,9 @@
 
   在此特感谢`Youpk`工具作者的开源精神，否则要凭空研究出来对于我来说真是太难了，需要对越来越庞大的android源码有充分的了解。因此，我这个移植也会依照`Youpk`的格式开源。以及感谢在移植过程中，在网上搜索到的各种填坑文章，以及Google开源的Android源码，还有各种在线源码搜索服务，还有各种编译系统以及填坑的文章,以及现在越来越快的科学速度，以及各种涉及到的效率工具。  
 
-  具体原理就不用讲了，参考Youpk即可，其实我也不太懂，我就只管移植完事即可,哈哈。
+  具体原理就不用讲了，参考Youpk即可，其实我也不太懂，我就只管移植完事即可,哈哈。  
+  
+  很少研究这方面，若是有遗漏地方大佬勿喷，欢迎提出来哈
 # 与Youpk不同的地方
 - `CompilerFilter::kVerifyAtRuntime`换成了`CompilerFilter::kVerify`  
 - `mirror::ClassLoader*`换成了`ObjPtr<mirror::ClassLoader>`  
@@ -15,6 +17,8 @@
 
 # 最后
 附上开源地址:[Humenger/Youpk4Pixel2XL](https://github.com/Humenger/Youpk4Pixel2XL)  
+
+
   
 更多详情：星球《[逆向涉猎](https://t.zsxq.com/071NJKjZb)》  
   
