@@ -19,7 +19,34 @@
 附上开源地址:[Humenger/Youpk4Pixel2XL](https://github.com/Humenger/Youpk4Pixel2XL)  
 
 
-  
+# 小工具
+### 快捷导出更改过的文件
+```python
+# 需要放在out目录下执行
+import os
+import re
+import sys
+import zipfile
+import shutil
+
+os.system("rm -rf repo_status.txt")
+os.system("rm -rf Youpk4Pixel2XL.zip")
+os.system("rm -rf ./Youpk4Pixel2XL/")
+os.system("repo status > repo_status.txt")
+status=open("repo_status.txt","rb").read().decode()
+for match in re.findall("project (.*?) branch Youpk4Pixel2XL([\s\S]*?)\nproject",status):
+    if match[1]:
+        for sub in match[1].splitlines():
+            if sub:
+                relate_path=match[0].strip()+re.findall("[^\t\n]+", sub)[1]
+                changed_file=os.path.abspath("../"+relate_path)
+                target_file=os.path.abspath("./Youpk4Pixel2XL/"+relate_path)
+                print(changed_file)
+                os.makedirs(os.path.dirname(target_file),exist_ok=True)
+                shutil.copyfile(changed_file,target_file)
+print("sucess")
+
+```
 
 ---  
 ---  
