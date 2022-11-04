@@ -14,6 +14,9 @@
 - `ClassLinker`里好几个函数返回值变成了`ObjPtr<T>`格式  
 - `PrettyMethod(method)`换成了`method->PrettyMethod()`  
 - `NATIVE_METHOD`和`REGISTER_NATIVE_METHODS`位置发生了改变  
+# 参考
+- [Android6.0上frameworks增加代码编译错误](https://www.jianshu.com/p/634d71e31a9d)  
+- [安卓脱壳速成](https://chinggg.github.io/post/fart/)  
 
 # 最后
 附上开源地址:[Humenger/Youpk4Pixel2XL](https://github.com/Humenger/Youpk4Pixel2XL)  
