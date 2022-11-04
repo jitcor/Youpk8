@@ -36,8 +36,9 @@ os.system("rm -rf repo_status.txt")
 os.system("rm -rf Youpk4Pixel2XL.zip")
 os.system("rm -rf ./Youpk4Pixel2XL/")
 os.system("repo status > repo_status.txt")
+os.system("echo project >> repo_status.txt")
 status=open("repo_status.txt","rb").read().decode()
-for match in re.findall("project (.*?) branch Youpk4Pixel2XL([\s\S]*?)\nproject",status):
+for match in re.findall("project (.*?) branch Youpk4Pixel2XL([\s\S]*?)\n(?=project)",status):
     if match[1]:
         for sub in match[1].splitlines():
             if sub:
@@ -48,6 +49,9 @@ for match in re.findall("project (.*?) branch Youpk4Pixel2XL([\s\S]*?)\nproject"
                 os.makedirs(os.path.dirname(target_file),exist_ok=True)
                 shutil.copyfile(changed_file,target_file)
 print("sucess")
+
+
+
 
 ```
 
